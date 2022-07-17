@@ -1,2 +1,38 @@
 <p> Hello </p>
 <p> This is a test </p>
+
+
+
+
+
+<ul>
+    <li><button type="button" onclick="randomColor()" > Change background color</button></li>
+    <li><button type="button" onclick="resetColor()">Reset background color</button></li>
+    <li><button type="button" onclick="myVar = window.setInterval(randomColor, 10)">Repeat background color change</button></li>
+    <li><button type="button" onclick="clearInterval(myVar)">Stop background color change</button></li>
+  </ul>
+
+<script> 
+	
+	function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+	function randomColor(){
+		
+		var i=getRndInteger(0, 255);
+		var j=getRndInteger(0, 255);
+		var l=getRndInteger(0, 255);
+		
+		var color= "rgb(" + i + "," + j + "," + l + ")";
+		document.body.style.backgroundColor = color;
+	
+	}
+	
+	function resetColor(){
+	document.body.style.backgroundColor = "#63d5b1";
+	
+	}
+	
+
+</script>
